@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gsap.set(chars, { color: "#005000" });
 
-    timeline.from(chars, { opacity: 1, scale: 1, ease: "sine", delay: 0 })
+    timeline.from(chars, { opacity: 1, scale: 0, ease: "sine", delay: 0.25 })
         .to(chars, { 
-            fontWeight: 900,
-            duration: 2.2,
+            fontWeight: 900, // Usa fontWeight en lugar de --font-weight
+            duration: 0.9,
             ease: "sine.inOut",
             stagger: { 
                 yoyo: true,
