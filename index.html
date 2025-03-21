@@ -7,9 +7,14 @@
     <title>albpenal Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="container">
+
+    <div class="container"> <!-- Comienzo container -->
+
         <header>
+            <!-- Título -->
+            <div class ="header-text">
             <h1>Hello!</h1>
             <h2>I'm Alberto Peñalba Martos</h2>
             <h2><div class="text one">&#123</div>
@@ -32,46 +37,103 @@
                 <div class="text one">e</div> 
                 <div class="text one">r</div>
                 <div class="text one">&#125</div> </h2>
-            <nav>
-                <ul>
-                    <li><a href="#About me">About me</a></li>
-                    <li><a href="#Portfolio">Portfolio</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
-            </nav>
+            </div>
+            <!-- Imagen -->
+            <img src="assets/foto carnet.png" alt="Foto de Alberto" class="profile-pic">
         </header>
-        <section id="About me" class="content">
+
+        <nav> <!-- Índice -->
+            <ul>
+                <li><a href="#About me">About me</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- About me -->
+        <section id="About me" class="content"> 
             <h2>About me</h2>
             <p>I'm a Videogame Developer student at Universidad Complutense de Madrid.
                 I am currently searching an intership that can be recognized by the university. </p>
         </section>
+
+        <!-- Portfolio -->
         <section id="Portfolio" class="content">
             <h2>Portfolio</h2>
             <p>In progress</p>
+            <div class="grid">
+                <!-- 9 elementos de portfolio -->
+                <div class="portfolio-item" onclick="openModal()">
+                    <img src="assets/FORGE-Logo.png" alt="Project Image">
+                </div>
+                <div class="portfolio-item" onclick="openModal()">
+                    <img src="assets/FORGE-Logo.png" alt="Project Image">
+                </div>
+                <div class="portfolio-item" onclick="openModal()">
+                    <img src="assets/FORGE-Logo.png" alt="Project Image">
+                </div>
+                <div class="portfolio-item" onclick="openModal()">
+                    <img src="assets/FORGE-Logo.png" alt="Project Image">
+                </div>
+                <div class="portfolio-item" onclick="openModal()">
+                    <img src="assets/FORGE-Logo.png" alt="Project Image">
+                </div>
+                <div class="portfolio-item" onclick="openModal()">
+                    <img src="assets/FORGE-Logo.png" alt="Project Image">
+                </div>
+                <div class="portfolio-item" onclick="openModal()">
+                    <img src="assets/FORGE-Logo.png" alt="Project Image">
+                </div>
+                <div class="portfolio-item" onclick="openModal()">
+                    <img src="assets/FORGE-Logo.png" alt="Project Image">
+                </div>
+                <div class="portfolio-item" onclick="openModal()">
+                    <img src="assets/FORGE-Logo.png" alt="Project Image">
+                </div>
+            </div>
         </section>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>TO DO</h2>
+                <p>Project description goes here.</p>
+                <video controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Contacto -->
         <section id="Contact" class="content">
             <h2>Contact</h2>
-                <p>
-                    📧 <a href="mailto:alberto.penalbamartos@gmail.com">alberto.penalbamartos@gmail.com</a>
-                </p>
-                <p>
-                    🔗 <a href="https://www.linkedin.com/in/alberto-pe%C3%B1alba-martos-585775335/" target="_blank">LinkedIn</a>
-                </p>
-                <p>
-                    🔗 <a href="https://github.com/albpenal" target="_blank">Github</a>
-                </p>
-                <p>
-                    📍 Madrid, Spain
-                </p>
-            </section>
-            
+
+                <p> 📧 <a href="mailto:alberto.penalbamartos@gmail.com">alberto.penalbamartos@gmail.com</a> </p>
+                
+                <p> 🔗 <a href="https://www.linkedin.com/in/alberto-pe%C3%B1alba-martos-585775335/" target="_blank">LinkedIn</a> </p>
+                
+                <p> 🔗 <a href="https://github.com/albpenal" target="_blank">Github</a> </p>
+                
+                <p> 📍 Madrid, Spain </p>
+                
         </section>
+
         <footer>
             <p>&copy; 2025 Alberto Peñalba Martos.</p>
         </footer>
-    </div>
+    </div> <!-- Fin container -->
     <!-- Importa el script externo -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

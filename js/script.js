@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const timeline = gsap.timeline({ repeat: -1 });
     const chars = document.querySelectorAll(".text");
 
-    gsap.set(chars, { color: "#005000" });
+    gsap.set(chars, { color: "#008db8" });
 
     timeline.from(chars, { opacity: 1, scale: 0, ease: "sine", delay: 0.25 })
         .to(chars, { 
