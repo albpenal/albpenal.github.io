@@ -2,22 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap');
 /* Estilos CSS aquí */
+/* FONDO */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-image: url('../assets/background.jpg'); /* Ruta de la imagen */
+    background-size: 100% auto; /* Se ajusta al ancho de la pantalla */
+    background-position: top;
+    background-repeat: repeat;
+    min-height: 100vh; /* Asegura que el cuerpo tenga altura suficiente */
 }
+/* CONTENEDOR */
 .container {
     max-width: 750px;
     margin: auto;
     padding: 20px;
-    background-color: #f8f8f8;
-    /*box-shadow: 0 0 10px rgba(0,0,0,0.1);*/
-    /*border-radius: 8px; */
+    background-color: #ffffff36;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.541);
+    border-radius: 8px; 
     margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 header h1, header h2 {
     margin: 5px 0;
 }
@@ -35,6 +43,7 @@ header {
     text-align: left; /* Asegura que el texto se alinee a la izquierda */
     flex: 1; /* Hace que el texto ocupe todo el espacio disponible a la izquierda */
 }
+/* MI FOTO */
 .profile-pic {
     width: 140px; /* Ajusta el tamaño de la imagen */
     height: 140px;
@@ -68,20 +77,20 @@ footer {
     text-align: center;
     margin-top: 20px;
     padding-top: 10px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #07666F;
 }
-
 
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 15px;
 }
 .portfolio-item {
     aspect-ratio: 1 / 1;
     height: auto;
     cursor: pointer;
-    background-color: #e6e6e6;
+    background-color: #0000000c;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.541);
     align-content: center;
     border-radius: 25px;
 }
@@ -89,6 +98,8 @@ footer {
     width: 100%;
     height: auto;
 }
+
+/* VENTANA EMERGENTE */
 .modal {
     display: none;
     position: fixed;
@@ -105,6 +116,10 @@ footer {
     padding: 20px;
     text-align: center;
     width: 50%;
+}
+.modal video {
+    width: 100%;
+    margin-top: 10px;
 }
 .close {
     position: absolute;
