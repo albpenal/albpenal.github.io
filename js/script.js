@@ -31,6 +31,7 @@ function openModal(title, description, videoSrc = null) {
         videoContainer.style.display = "block";
         video.querySelector("source").src = videoSrc;
         video.load();
+        video.muted = true;
         video.play().catch((err) => {
             console.warn("No se pudo reproducir automáticamente:", err);
         });

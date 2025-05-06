@@ -85,6 +85,9 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; /* Añade padding horizontal para crear espacio a los lados */
 }
 .portfolio-item {
     aspect-ratio: 1 / 1;
@@ -98,6 +101,7 @@ footer {
 .portfolio-item img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 /* VENTANA EMERGENTE */
