@@ -65,34 +65,24 @@
                 <!-- 9 elementos de portfolio -->
 
                 <!-- Cursed Cave -->
-                <div class="portfolio-item" onclick="openModal('Cursed Cave', 'Github <a href=&quot;https://github.com/Proyectos1-FDI-UCM/c2022-Grupo02&quot; target=&quot;_blank&quot;>here</a>', 'assets/cursedCave.mp4')">
+                <div class="portfolio-item" onclick="openModal('Cursed Cave', 
+                '<a href=&quot;https://github.com/Proyectos1-FDI-UCM/c2022-Grupo02&quot; target=&quot;_blank&quot;>Github here</a>',
+                 'assets/cursedCave.mp4')">
                 <img src="assets/cursedCave.png" alt="Cursed Cave">
                 </div>
 
-                <!-- Proyecto 1 -->
-                <div class="portfolio-item" onclick="openModal('Proyecto 1', 'Descripción del proyecto 1', 'video1.mp4')">
-                    <img src="assets/FORGE-Logo.png" alt="Proyecto 1">
+                <!-- Forge -->
+                <div class="portfolio-item" onclick="openModal('Forge', 
+                'Both games were fully made using Forge, our own videogame engine, <a href=&quot;https://github.com/UCM-FDI-DISIA/FORGE&quot; target=&quot;_blank&quot;>github here</a>',
+                'assets/forge.mkv')">
+                    <img src="assets/FORGE-Logo.png" alt="Forge">
                 </div>
-                <div class="portfolio-item" onclick="openModal('Proyecto 1', 'Descripción del proyecto 1', 'video1.mp4')">
-                    <img src="assets/FORGE-Logo.png" alt="Proyecto 2">
-                </div>
-                <div class="portfolio-item" onclick="openModal('Proyecto 1', 'Descripción del proyecto 1', 'video1.mp4')">
-                    <img src="assets/FORGE-Logo.png" alt="Proyecto 3">
-                </div>
-                <div class="portfolio-item" onclick="openModal('Proyecto 1', 'Descripción del proyecto 1', 'video1.mp4')">
-                    <img src="assets/FORGE-Logo.png" alt="Proyecto 4">
-                </div>
-                <div class="portfolio-item" onclick="openModal('Proyecto 1', 'Descripción del proyecto 1', 'video1.mp4')">
-                    <img src="assets/FORGE-Logo.png" alt="Proyecto 5">
-                </div>
-                <div class="portfolio-item" onclick="openModal('Proyecto 1', 'Descripción del proyecto 1', 'video1.mp4')">
-                    <img src="assets/FORGE-Logo.png" alt="Proyecto 6">
-                </div>
-                <div class="portfolio-item" onclick="openModal('Proyecto 1', 'Descripción del proyecto 1', 'video1.mp4')">
-                    <img src="assets/FORGE-Logo.png" alt="Proyecto 7">
-                </div>
-                <div class="portfolio-item" onclick="openModal('Proyecto 1', 'Descripción del proyecto 1', 'video1.mp4')">
-                    <img src="assets/FORGE-Logo.png" alt="Proyecto 8">
+
+                <!-- Flappy Halloween -->
+                <div class="portfolio-item" onclick="openModal('Flappy Halloween',
+                 '<a href=&quot;https://github.com/albpenal/PFinalSonido&quot; target=&quot;_blank&quot;>Github here</a>',
+                  'assets/flappy.mkv')">
+                    <img src="assets/Flappy.png" alt="Flappy Halloween">
                 </div>
             </div>
         </section>
@@ -103,16 +93,21 @@
                 <span class="close" onclick="closeModal()">&times;</span>
                 <h2 id="modal-title">Título del Proyecto</h2>
                 <p id="modal-description">Descripción aquí</p>
-                <video id="modal-video" controls>
-                    <source src="" type="video/mp4">
-                    Tu navegador no soporta videos.
-                </video>
+
+                <!-- Contenedor del vídeo, ocultable -->
+                <div id="modal-video-container">
+                    <video id="modal-video" controls>
+                        <source src="" type="video/mp4">
+                        Tu navegador no soporta videos.
+                    </video>
+                </div>
             </div>
         </div>
 
+
         <!-- Contacto -->
         <section id="Contact" class="content">
-            <h2>Contact</h2>
+            <h2><br> Contact</h2>
 
                 <p> 📧 <a href="mailto:alberto.penalbamartos@gmail.com">alberto.penalbamartos@gmail.com</a> </p>
                 

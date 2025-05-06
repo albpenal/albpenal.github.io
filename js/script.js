@@ -20,13 +20,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // FUNCIONES VENTANA EMERGENTE
-function openModal(title, description, videoSrc) {
+function openModal(title, description, videoSrc = null) {
     document.getElementById("modal-title").innerText = title;
     document.getElementById("modal-description").innerHTML = description;
-    document.getElementById("modal-video").querySelector("source").src = videoSrc;
-    document.getElementById("modal-video").load(); // Recargar el video
+
+    const videoContainer = document.getElementById("modal-video-container");
+    const video = document.getElementById("modal-video");
+
+    if (videoSrc) {
+        videoContainer.style.display = "block";
+        video.querySelector("source").src = videoSrc;
+        video.load();
+        video.play().catch((err) => {
+            console.warn("No se pudo reproducir automáticamente:", err);
+        });
+    } else {
+        video.pause();
+        video.currentTime = 0;
+        videoContainer.style.display = "none";
+    }
+
     document.getElementById("modal").style.display = "flex";
 }
+
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
     document.getElementById("modal-video").pause();

@@ -84,6 +84,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+    margin: 20px;
 }
 .portfolio-item {
     aspect-ratio: 1 / 1;
@@ -116,6 +117,9 @@ footer {
     padding: 20px;
     text-align: center;
     width: 50%;
+}
+#modal-video-container {
+    margin-top: 20px;
 }
 .modal video {
     width: 100%;
